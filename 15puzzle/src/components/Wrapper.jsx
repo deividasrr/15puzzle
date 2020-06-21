@@ -12,11 +12,6 @@ class Wrapper extends React.Component {
           </div>
           <main>
             <Board />
-            <div className="menu">
-              <button>Restart</button>
-              <button>Shuffle</button>
-              <button>Solve</button>
-            </div>
           </main>
           <footer>
             <div>
