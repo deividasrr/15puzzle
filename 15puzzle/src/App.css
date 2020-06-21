@@ -1,24 +1,107 @@
 .board-cell {
-  height: 50px;
-  width: 50px;
-  background-color: pink;
+  height: 5rem;
   font-weight: bold;
-  line-height: 50px;
   text-align: center;
+  color: white;
+  border-radius: 5px;
+  font-size: 5rem;
+  line-height: 5rem;
+  cursor: pointer;
+  transition: color 0.1s ease-out;
+  /* transition: background-color 0.2s ease-out; */
+}
+
+.board-cell:hover {
+  color: black;
+  transition: color 0.1s ease-in;
+  /* background-color: black; */
+}
+
+.header h1 {
+  font-size: 3rem;
 }
 
 .board {
   display: grid;
-  grid-template-columns: 50px 50px 50px 50px;
-  border: solid 1px black;
-  width: 200px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
 }
 
 .board-cell-empty {
-  display: none;
+  /* display: none; */
+  background-color: white !important;
+  color: white !important;
 }
 
-.board-cell-empty {
-  background-color: darkred !important;
-  color: darkred;
+.wrapper {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: darkred;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+button,
+input {
+  transition: background-color 0.5s ease;
+  outline: none;
+}
+button:hover {
+  background-color: black;
+}
+
+button:disabled {
+  background-color: slategray !important;
+  cursor: not-allowed;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  height: 75px;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  color: darkgrey;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.menu {
+  display: flex;
+  place-content: flex-end;
+  padding-right: 10px;
 }

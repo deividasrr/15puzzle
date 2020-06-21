@@ -5,9 +5,19 @@ class Board extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      sortedCells: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, -1], // -1 represents the empty cell
       cells: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, -1], // -1 represents the empty cell
     };
   }
+
+  checkIfSorted = () => {
+    for (let x = 0; x < 16; x++) {
+      if (this.state.sortedCells[x] !== this.state.cells[x]) {
+        return false;
+      }
+    }
+    return true;
+  };
 
   // shuffleCells = () => {
   //   let newCells = [...this.state.cells];
@@ -73,7 +83,6 @@ class Board extends React.Component {
               key={"cell" + el}
               index={index}
               num={el}
-              // className={el !== -1 ? "board-cell" : "empty-cell"}
               handleClickCell={this.handleClickCell}
             />
           );

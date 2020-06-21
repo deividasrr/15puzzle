@@ -1,23 +1,20 @@
 import React from "react";
 
 const Cell = (props) => {
-  console.log(props);
+  const isEmptyCell = props.num === -1;
   return (
     <div
       num={props.num}
       index={props.index}
-      // className={
-      //   props.num !== -1 ? "board-cell" : "board-cell board-cell-empty"
-      // }
-      style={
-        props.num === -1
-          ? { backgroundColor: "white", color: "white" }
-          : { backgroundColor: "pink", color: "black" }
-      }
       className={"board-cell"}
+      style={
+        !isEmptyCell
+          ? { backgroundColor: `rgb(${150 + props.index * 5}, 0, 0)` }
+          : { backgroundColor: "white" }
+      }
       onClick={() => props.handleClickCell(props.index)}
     >
-      {props.num}
+      {!isEmptyCell ? props.num : null}
     </div>
   );
 };
