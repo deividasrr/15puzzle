@@ -84,9 +84,9 @@ class Board extends React.Component {
           })}
         </div>
         <div className="menu">
-          <button>Restart</button>
+          {/* <button>Restart</button> */}
           <button onClick={this.shuffleCells}>Shuffle</button>
-          <button>Solve</button>
+          {/* <button>Solve</button> */}
         </div>
       </div>
     );
