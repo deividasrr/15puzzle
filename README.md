@@ -6,5 +6,6 @@ App available at (https://puzzle-e454e.web.app/)
 
 The app is built upon create-react-app. To launch the app, use
 
-> npm install
-> npm start
+>npm install
+>
+>npm start
